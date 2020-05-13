@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Category App</string>
+    <string name="search">search</string>
+    <string name="category_name">Category name</string>
+    <string name="category">Category</string>
+    <string name="save">Save</string>
+    <string name="add_customer">Add customer</string>
+    <string name="sync">Sync</string>
+    <string name="clear_ticket">Clear ticket</string>
+</resources>
