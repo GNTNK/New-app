@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <SearchView
+        android:id="@+id/receipts_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search" />
+
+    <TextView
+        android:id="@+id/receipts_clock"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/receipts_search"
+        android:gravity="fill_vertical"
+        android:text="Date"
+        android:textColor="@android:color/holo_green_light" />
+
+    <RelativeLayout
+        android:id="@+id/receipts_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/receipts_clock">
+
+        <LinearLayout
+            android:id="@+id/linear_layout4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_photo" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@+id/linear_layout4"
+            android:background="@drawable/shape_4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="3108"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:text="09:17"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:text="#1-1000"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

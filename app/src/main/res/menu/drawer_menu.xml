@@ -2,7 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_sales"
@@ -21,7 +20,6 @@
             android:icon="@drawable/ic_settings"
             android:title="@string/settings" />
     </group>
-
     <item android:title="">
         <menu>
             <item
@@ -29,11 +27,11 @@
                 android:icon="@drawable/ic_back_office"
                 android:title="@string/back_office" />
             <item
-                android:id="@+id/apps"
+                android:id="@+id/nav_apps"
                 android:icon="@drawable/ic_shop"
                 android:title="@string/apps" />
             <item
-                android:id="@+id/help"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/ic_help"
                 android:title="@string/help" />
         </menu>

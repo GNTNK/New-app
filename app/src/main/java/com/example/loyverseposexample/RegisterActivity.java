@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,13 +21,13 @@ public class RegisterActivity extends AppCompatActivity {
     EditText editTextUsername, editTestEmail, editTestPassword, editTextCnfPassword;
     Button buttonRegister;
     private UserDAO userDAO;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back);
-        setTitle("Registration");
+        back = findViewById(R.id.reg_back);
 
         editTextUsername = findViewById(R.id.editTextUsername);
         editTestEmail = findViewById(R.id.editTextEmail);
@@ -53,6 +54,13 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(RegisterActivity.this, "Password is not matching", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

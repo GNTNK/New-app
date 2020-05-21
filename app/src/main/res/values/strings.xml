@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Category App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="search">search</string>
     <string name="category_name">Category name</string>
     <string name="category">Category</string>
@@ -16,4 +18,5 @@
     <string name="help">Help</string>
     <string name="owner">Owner</string>
     <string name="pos_1">POS 1</string>
+    <string name="gntnk">GNTNK</string>
 </resources>

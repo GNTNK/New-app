@@ -6,54 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
-    <LinearLayout
-        android:id="@+id/input_group"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_margin="5dp"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/appbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="User Email"
-            android:inputType="text"
-            android:padding="15dp"
-            tools:ignore="TextFields" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="15dp" />
-
-
-        <Button
-            android:id="@+id/buttonLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="@android:color/holo_green_light"
-            android:text="SIGN IN"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="17sp"
-            tools:ignore="HardcodedText" />
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/sign_back"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_back" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_below="@+id/appbar2"
+            android:id="@+id/input_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="User Email"
+                android:inputType="text"
+                android:padding="15dp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp" />
 
 
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="SIGN IN"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </RelativeLayout>

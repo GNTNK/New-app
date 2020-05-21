@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-
     <item
         android:id="@+id/add_customer"
         android:icon="@drawable/ic_person"
+        android:layout_marginRight="100dp"
         android:title="@string/add_customer"
         app:showAsAction="ifRoom" />
     <item

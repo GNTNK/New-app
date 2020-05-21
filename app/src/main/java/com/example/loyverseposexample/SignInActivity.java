@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,11 +23,13 @@ public class SignInActivity extends AppCompatActivity {
     TextView textViewRegister;
     UserDAO db;
     UserDataBase dataBase;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        back = findViewById(R.id.sign_back);
 
         editEmail = findViewById(R.id.editTextEmail);
         editPassword = findViewById(R.id.editTextPassword);
@@ -54,6 +57,13 @@ public class SignInActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(SignInActivity.this, "Unregister User, or incorrect username or password", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -6,67 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        tools:ignore="MissingConstraints">
-
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_margin="5dp"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:background="@android:color/holo_green_light">
+            <ImageView
+                android:id="@+id/reg_back"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_back"/>
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="15dp" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="15dp"/>
-        <EditText
-            android:id="@+id/editTextCnfPassword"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_1"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="15dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_marginTop="10dp"
-            android:background="@android:color/holo_green_light"
-            android:text="Sing Up"
-            android:textColor="@android:color/white"
-            android:textSize="17sp"/>
+            android:layout_below="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="15dp" />
 
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/editTextCnfPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp" />
+
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="Sing Up"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
